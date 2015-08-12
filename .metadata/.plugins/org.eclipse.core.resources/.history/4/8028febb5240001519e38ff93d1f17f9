@@ -1,0 +1,16 @@
+package ba.bitcamp.mmorpg.game;
+
+import java.applet.Applet;
+
+public class Core extends Applet implements Runnable {
+
+	private static final long serialVersionUID = 4832782872250944588L;
+
+	public void run() {
+		
+		
+	}
+
+	
+
+}

@@ -1,0 +1,42 @@
+package ba.bitcamp.mmorpg.game;
+
+import java.applet.Applet;
+import java.awt.Dimension;
+import java.awt.Image;
+
+import javax.swing.JFrame;
+
+public class Core extends Applet implements Runnable {
+	private static final long serialVersionUID = 4832782872250944588L;
+	
+	
+	private JFrame frame;
+	
+	public static final int resolution = 1;
+	
+	public static double dY = 0, dX = 0;
+	public static int direction = 0;
+	
+	public static boolean moving = false;
+	public static boolean run = false;
+	
+	
+	private Image screen;
+	
+	public static Dimension screenSize = new Dimension(500, 500);
+	public static Dimension pixel = new Dimension(screenSize.width, screenSize.height);
+	public static Dimension size;
+	
+	public static String name = "Space";
+	
+	
+	
+
+	public void run() {
+		
+		
+	}
+
+	
+
+}

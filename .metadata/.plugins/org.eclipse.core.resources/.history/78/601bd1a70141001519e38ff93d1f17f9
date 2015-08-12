@@ -1,0 +1,72 @@
+package ba.bitcamp.mmorpg.game;
+import org.newdawn.slick.*;
+import org.newdawn.slick.state.*;
+
+public class Play extends BasicGameState {
+	
+	Image map;
+	Animation ship, movingUp, movingDown, movingLeft, movingRight;
+	boolean quit = false;
+	int[] duration = {200,200};
+	float shipPositionX = 0;
+	float shipPositionY = 0;
+	float shiftX = shipPositionX + 300;
+	float shiftY = shipPositionY + 250;
+	
+	
+	/**
+	 * 
+	 * constructor
+	 */
+	public Play(int state) {
+
+	}
+
+	/**
+	 * This method initializes the game
+	 */
+	public void init(GameContainer gc, StateBasedGame sbg)
+			throws SlickException {
+		
+		map = new Image("pics/map.png");
+		Image[] flyUp = {new Image("pics/ship1.png"), new Image("pics/ship1.png")};
+		Image[] flyDown = {new Image("pics/ship1down.png"), new Image("pics/ship1down.png")};
+		Image[] flyLeft = {new Image("pics/ship1left.png"), new Image("pics/ship1left.png")};
+		Image[] flyRight = {new Image("pics/ship1right.png"), new Image("pics/ship1right.png")};
+		
+		movingUp = new Animation(flyUp, duration, false);
+		movingDown = new Animation(flyDown, duration, false);
+		movingLeft = new Animation(flyLeft, duration, false);
+		movingRight = new Animation(flyRight, duration, false);
+		ship = movingUp;
+		
+
+	}
+
+	/**
+	 * This method draws on the screen
+	 */
+	public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
+			throws SlickException {
+		map.draw(shipPositionX, shipPositionY);
+		ship.draw(shiftX,shiftY);
+
+	}
+
+	/**
+	 * This method updates the images on the screen(moving the objects)
+	 */
+	public void update(GameContainer gc, StateBasedGame sbg, int delta)
+			throws SlickException {
+
+	}
+
+	/**
+	 * This method returns the id of the state
+	 */
+	public int getID() {
+
+		return 1;
+	}
+
+}

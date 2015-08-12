@@ -1,0 +1,61 @@
+package ba.bitcamp.mmorpg.game;
+
+import org.newdawn.slick.*;
+import org.newdawn.slick.state.*;
+import org.lwjgl.input.Mouse;
+
+public class Menu extends BasicGameState {
+	Image solar;
+	
+	int solarX = 200;
+	int solarY = 200;
+	
+	
+	
+	/**
+	 * constructor
+	 */
+	public Menu(int state) {
+
+	}
+
+	/**
+	 * This method initializes the game
+	 */
+	public void init(GameContainer gc, StateBasedGame sbg)
+			throws SlickException {
+		
+		solar = new Image("pics/solar");
+
+	}
+
+	/**
+	 * This method draws on the screen
+	 */
+	public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
+			throws SlickException {
+		
+		g.drawImage(solar, solarX, solarY);
+		
+
+	}
+
+	/**
+	 * This method updates the images on the screen(moving the objects)
+	 */
+	public void update(GameContainer gc, StateBasedGame sbg, int delta)
+			throws SlickException {
+		
+		
+
+	}
+
+	/**
+	 * This method returns the id of the state
+	 */
+	public int getID() {
+
+		return 0;
+	}
+
+}

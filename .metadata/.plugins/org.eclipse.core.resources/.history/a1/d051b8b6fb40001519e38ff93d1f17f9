@@ -1,0 +1,48 @@
+package ba.bitcamp.mmorpg.game;
+import org.newdawn.slick.*;
+import org.newdawn.slick.state.*;
+
+public class Play extends BasicGameState {
+	
+	/**
+	 * 
+	 * constructor
+	 */
+	public Play(int state) {
+
+	}
+
+	/**
+	 * This method initializes the game
+	 */
+	public void init(GameContainer gc, StateBasedGame sbg)
+			throws SlickException {
+
+	}
+
+	/**
+	 * This method draws on the screen
+	 */
+	public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
+			throws SlickException {
+		g.drawString("this is the play state", 100, 100);
+
+	}
+
+	/**
+	 * This method updates the images on the screen(moving the objects)
+	 */
+	public void update(GameContainer gc, StateBasedGame sbg, int delta)
+			throws SlickException {
+
+	}
+
+	/**
+	 * This method returns the id of the state
+	 */
+	public int getID() {
+
+		return 1;
+	}
+
+}
